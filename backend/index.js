@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 const cors = require('cors')
 const authController = require('./controllers/authController')
+const blogController = require('./controllers/blogController')
 const app = express()
 
 
@@ -20,6 +21,7 @@ async function connectDB() {
   app.use(express.json())
   app.use(express.urlencoded({extended:true}))
   app.use('/auth', authController)
+  app.use('/blog', blogController)
 
 
 //connect server
