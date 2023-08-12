@@ -31,7 +31,7 @@ function FeaturedBlogs() {
                 </p>
                 <div className={classes.authorAndCreatedAt}>
                   <span>
-                    <span>Author:</span>Villy
+                    <span>Author:</span>Ajay
                   </span>
                   <span>
                     <span>Created:</span>12-08-2023
@@ -51,7 +51,7 @@ function FeaturedBlogs() {
                 </p>
                 <div className={classes.authorAndCreatedAt}>
                   <span>
-                    <span>Author:</span>Villy
+                    <span>Author:</span>Ajay
                   </span>
                   <span>
                     <span>Created:</span>12-08-2023
@@ -69,7 +69,7 @@ function FeaturedBlogs() {
                 </p>
                 <div className={classes.authorAndCreatedAt}>
                   <span>
-                    <span>Author:</span>Villy
+                    <span>Author:</span>Ajay
                   </span>
                   <span>
                     <span>Created:</span>12-08-2023
