@@ -1,8 +1,8 @@
 const BASE_URL = "http://localhost:5000"
 
 export const request = async (url, method, headers = {}, body = {}, isNotStringified = false) => {
-    let res
-    let data
+    let res = ''
+    let data = ''
     switch (method) {
         case 'GET':
             res = await fetch(BASE_URL + url, { headers })
@@ -35,6 +35,3 @@ export const request = async (url, method, headers = {}, body = {}, isNotStringi
             return
     }
 }
-
-
-//The function uses the fetch() method to make HTTP requests. The fetch() method is a modern JavaScript API that makes it easy to make asynchronous HTTP requests. The fetch() method returns a promise, which is a JavaScript object that represents an asynchronous operation. The promise will be resolved with the response object when the request is completed.

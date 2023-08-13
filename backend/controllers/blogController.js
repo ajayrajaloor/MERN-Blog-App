@@ -11,6 +11,8 @@ blogController.get("/getAll", async (req, res) => {
   }
 });
 
+
+
 blogController.get("/find/:id", async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id).populate(
@@ -34,10 +36,10 @@ blogController.get('/featured', async (req, res) => {
   }
 })
 
-blogController.get("/", verifyToken, async (req, res) => {
+blogController.post("/", verifyToken, async (req, res) => {
   try {
+
      const blog = await Blog.create({ ...req.body, userId: req.user.id });
-    
     return res.status(201).json(blog);
   } catch (error) {
     return res.status(500).json(error);
