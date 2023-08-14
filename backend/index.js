@@ -44,6 +44,7 @@ app.use('/images', express.static('public/images'))
   })
 
 
+
   app.post('/upload', upload.single("image"),async(req,res) =>{
     return res.status(200).json({msg:'Successfully Uploaded'})
   })

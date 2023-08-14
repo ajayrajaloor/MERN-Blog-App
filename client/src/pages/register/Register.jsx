@@ -36,7 +36,7 @@ function Register() {
           <input type="email" placeholder='Email...' onChange={(e) =>setEmail(e.target.value)}/>
           <input type="password" placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/>
           <button type='submit'>Register</button>
-          <p>Already have an account? <Link to='/login' >Login</Link> </p>
+          <p>Already have an account? <Link to='/login'>Login</Link> </p>
         </form>
       </div>
     </div>

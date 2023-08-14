@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classes from "./login.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { request } from "../../utils/fetchApi";
+import { useDispatch } from "react-redux";
 import { login } from "../../redux/authSlice";
 
 function Login() {
@@ -15,11 +15,9 @@ function Login() {
     e.preventDefault();
 
     if (email === "" || password === "") return;
-
     try {
-      const options = {
-        "Content-Type": "application/json",
-      };
+      const options = { "Content-Type": "application/json" };
+
       const data = await request("/auth/login", "POST", options, {
         email,
         password,
@@ -28,7 +26,7 @@ function Login() {
       dispatch(login(data));
       navigate("/");
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
   return (
@@ -48,7 +46,7 @@ function Login() {
           />
           <button type="submit">Login</button>
           <p>
-            Don't have an account? <Link to="/register">Register</Link>{" "}
+            Don't have an account? <Link to="/register">Register</Link>
           </p>
         </form>
       </div>

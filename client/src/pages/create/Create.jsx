@@ -119,7 +119,7 @@ function Create() {
                 onChange={onchangeFile}
                 style={{ display: "none" }}
               />
-              {img && <p className={classes.imageName}>{img.name}<AiOutlineCloseCircle className={classes.closeIcon} onClick={()=>handleCloseImg()}/></p>}
+            {img && <p className={classes.imageName}>{img.name}<AiOutlineCloseCircle className={classes.closeIcon} onClick={()=>handleCloseImg()}/></p>}
             </div>
             <div className={classes.buttonWrapper}>
                 <button className={classes.submitBtn} type="submit">
